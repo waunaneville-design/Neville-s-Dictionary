@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neville's Wordly Dictionary</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Wordly</p>
+        <h1> Neville's Dictionary</h1>
+        <p class="subtitle">Search words, view definitions, and save favorites instantly.</p>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button">Dark mode</button>
+    </header>
+
+    <main>
+      <section class="search-panel">
+        <form id="searchForm" class="search-form">
+          <label for="searchInput">Search a word</label>
+          <div class="input-row">
+            <input id="searchInput" name="word" type="search" placeholder="Enter a word" autocomplete="off" required />
+            <button type="submit">Search</button>
+          </div>
+          <p class="hint">Try words like "inspire", "serendipity", or "translate".</p>
+        </form>
+
+        <div id="statusMessage" class="status-message" aria-live="polite"></div>
+      </section>
+
+      <section id="resultSection" class="result-section hidden">
+        <div class="result-header">
+          <div>
+            <h2 id="resultWord"></h2>
+            <p id="resultPhonetic" class="phonetic"></p>
+          </div>
+          <button id="saveButton" class="save-button" type="button">Save word</button>
+        </div>
+
+        <div id="definitionList" class="definition-list"></div>
+        <div id="synonymList" class="synonym-list"></div>
+        <div id="sourceLinks" class="source-links"></div>
+      </section>
+
+      <aside class="favorites-panel">
+        <div class="panel-heading">
+          <h3>Favorites</h3>
+          <p>Saved words are stored locally for return visits.</p>
+        </div>
+        <ul id="favoritesList" class="favorites-list"></ul>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

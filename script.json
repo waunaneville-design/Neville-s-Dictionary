@@ -1,0 +1,6 @@
+{
+  "name": "wordly-dictionary-spa",
+  "version": "1.0.0",
+  "description": "A single-page dictionary interface for searching words and saving favorites.",
+  "api": "https://api.dictionaryapi.dev/"
+}
